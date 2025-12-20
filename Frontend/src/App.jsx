@@ -6,19 +6,19 @@ import Loader from './components/Loader.jsx'
 
 import HeroSection from './pages/Landing/HeroSection.jsx'
 import OurProjects from './pages/Landing/OurProjects.jsx'
-import HappyClients from './pages/Landing/HappyClients.js'
-import ContactForm from './pages/Landing/ContactForm.js'
-import Newsletter from './pages/Landing/Newsletter.js'
+import HappyClients from './pages/Landing/HappyClients.jsx'
+import ContactForm from './pages/Landing/ContactForm.jsx'
+import Newsletter from './pages/Landing/Newsletter.jsx'
 
 import ChatbotWidget from './components/ChatbotWidget.jsx'
 
 import AdminDashboard from './pages/Admin/AdminDashboard.jsx'
-import AdminProjects from './pages/Admin/AdminProjects.js'
-import AdminClients from './pages/Admin/AdminClients.js'
-import AdminContacts from './pages/Admin/AdminContacts.js'
+import AdminProjects from './pages/Admin/AdminProjects.jsx'
+import AdminClients from './pages/Admin/AdminClients.jsx'
+import AdminContacts from './pages/Admin/AdminContacts.jsx'
 import AdminSubscribers from './pages/Admin/AdminSubscribers.jsx'
 
-import Login from './pages/Auth/Login.js'
+import Login from './pages/Auth/Login.jsx'
 import Signup from './pages/Auth/Signup.jsx'
 
 import { useAuth } from './context/AuthContext.jsx'
