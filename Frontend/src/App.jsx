@@ -4,7 +4,7 @@ import Navbar from './components/Navbar.jsx'
 import Footer from './components/Footer.jsx'
 import Loader from './components/Loader.jsx'
 
-import HeroSection from './pages/Landing/HeroSection'
+import HeroSection from './Pages/Landing/HeroSection'
 import OurProjects from './pages/Landing/OurProjects.jsx'
 import HappyClients from './pages/Landing/HappyClients.jsx'
 import ContactForm from './pages/Landing/ContactForm.jsx'
