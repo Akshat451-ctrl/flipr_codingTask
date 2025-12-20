@@ -3,11 +3,11 @@ import { NavLink, useLocation } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext.jsx'
 
 const navLinkBase =
-  'rounded-full px-3.5 py-2 text-sm font-semibold transition focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600 focus-visible:ring-offset-2'
+  'inline-flex items-center justify-center rounded-full px-3.5 py-2 text-sm font-semibold transition focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600 focus-visible:ring-offset-2'
 
 const navLinkInactive =
-  'text-slate-600 hover:bg-white hover:text-slate-900 hover:ring-1 hover:ring-slate-200/70'
-const navLinkActive = 'bg-white text-emerald-700 shadow-sm ring-1 ring-emerald-200'
+  'text-slate-700 hover:bg-white/80 hover:text-slate-900 hover:ring-1 hover:ring-slate-200/70'
+const navLinkActive = 'bg-emerald-50 text-emerald-800 ring-1 ring-emerald-200'
 
 function Navbar() {
   const location = useLocation()
@@ -16,7 +16,7 @@ function Navbar() {
   const { isAuthenticated, logout } = useAuth()
 
   return (
-    <header className="sticky top-0 z-40 border-b border-slate-100 bg-white/90 shadow-sm backdrop-blur supports-[backdrop-filter]:bg-white/75">
+    <header className="sticky top-0 z-40 border-b border-slate-200/70 bg-white/90 shadow-sm backdrop-blur supports-[backdrop-filter]:bg-white/75">
       <div className="container">
         <div className="flex h-16 items-center justify-between">
           <NavLink to="/" className="group flex items-center gap-3">
@@ -35,7 +35,7 @@ function Navbar() {
 
           <nav className="hidden items-center md:flex" aria-label="Primary">
             {!isAdminRoute && !isAuthRoute ? (
-              <div className="flex items-center gap-1 rounded-full bg-slate-50/80 p-1 ring-1 ring-slate-200/70">
+              <div className="flex items-center gap-1 rounded-full bg-white/70 p-1 ring-1 ring-slate-200/70 backdrop-blur">
                 <a className={`${navLinkBase} ${navLinkInactive}`} href="#projects">
                   Projects
                 </a>
@@ -54,8 +54,8 @@ function Navbar() {
                   {isAuthenticated ? 'Admin' : 'Login'}
                 </NavLink>
               </div>
-            ) : (
-              <div className="flex items-center gap-1 rounded-full bg-slate-50/80 p-1 ring-1 ring-slate-200/70">
+            ) : isAdminRoute ? (
+              <div className="flex items-center gap-1 rounded-full bg-white/70 p-1 ring-1 ring-slate-200/70 backdrop-blur">
                 <NavLink
                   to="/admin"
                   end
@@ -98,6 +98,18 @@ function Navbar() {
                   Subscribers
                 </NavLink>
               </div>
+            ) : (
+              <div className="flex items-center gap-1 rounded-full bg-white/70 p-1 ring-1 ring-slate-200/70 backdrop-blur">
+                <NavLink
+                  to="/"
+                  end
+                  className={({ isActive }) =>
+                    `${navLinkBase} ${isActive ? navLinkActive : navLinkInactive}`
+                  }
+                >
+                  Home
+                </NavLink>
+              </div>
             )}
           </nav>
 
@@ -111,6 +123,10 @@ function Navbar() {
                   View site
                 </NavLink>
               </div>
+            ) : isAuthRoute ? (
+              <NavLink to="/" className="secondary-button">
+                Back to site
+              </NavLink>
             ) : (
               <div className="flex items-center gap-2">
                 <a
@@ -134,10 +150,10 @@ function Navbar() {
 
           <div className="md:hidden">
             <NavLink
-              to={isAdminRoute ? '/' : isAuthenticated ? '/admin' : '/login'}
+              to={isAuthRoute ? '/' : isAdminRoute ? '/' : isAuthenticated ? '/admin' : '/login'}
               className="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-900 shadow-sm transition hover:bg-slate-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600 focus-visible:ring-offset-2"
             >
-              {isAdminRoute ? 'Site' : isAuthenticated ? 'Admin' : 'Login'}
+              {isAuthRoute ? 'Home' : isAdminRoute ? 'Site' : isAuthenticated ? 'Admin' : 'Login'}
             </NavLink>
           </div>
         </div>
