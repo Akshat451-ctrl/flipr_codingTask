@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="520" viewBox="0 0 1600 520">
+  <defs>
+    <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0f172a" stop-opacity="0.0"/>
+      <stop offset="1" stop-color="#0f172a" stop-opacity="0.35"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="65%" cy="70%" r="70%">
+      <stop offset="0" stop-color="#0ea5e9" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#0ea5e9" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse">
+      <path d="M44 0H0V44" fill="none" stroke="#94a3b8" stroke-opacity="0.20" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="520" fill="#0b1220"/>
+  <rect width="1600" height="520" fill="url(#grid)" opacity="0.55"/>
+  <circle cx="1120" cy="360" r="320" fill="url(#glow)"/>
+  <rect width="1600" height="520" fill="url(#fade)"/>
+
+  <path d="M-40 120 C 260 40, 520 170, 820 105 S 1340 40, 1680 120" fill="none" stroke="#10b981" stroke-opacity="0.18" stroke-width="6"/>
+  <path d="M-60 175 C 260 95, 530 230, 860 165 S 1370 95, 1710 180" fill="none" stroke="#0ea5e9" stroke-opacity="0.16" stroke-width="6"/>
+</svg>
