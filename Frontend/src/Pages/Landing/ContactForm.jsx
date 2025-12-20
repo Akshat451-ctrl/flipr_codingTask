@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react'
 
-import Loader from '../../components/Loader.jsx'
-import { apiClient, normalizeApiError } from '../../hooks/apiClient.js'
+import Loader from '../Frontend/src/components/Loader.jsx'
+import { apiClient, normalizeApiError } from '../Frontend/src/hooks/apiClient.js'
 
 const initialFormState = {
   fullName: '',

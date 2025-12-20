@@ -1,8 +1,8 @@
 import { useCallback, useMemo } from 'react'
 
-import Loader from '../../components/Loader.jsx'
-import { apiClient, normalizeApiError } from '../../hooks/apiClient.js'
-import useAsync from '../../hooks/useAsync.js'
+import Loader from '../Frontend/src/components/Loader.jsx'
+import { apiClient, normalizeApiError } from '../Frontend/src/hooks/apiClient.js'
+import useAsync from '../Frontend/src/hooks/useAsync.js'
 
 function AdminContacts() {
   const fallback = useMemo(
