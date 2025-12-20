@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-import Loader from '../Frontend/src/components/Loader.jsx'
+import Loader from '../components/Loader.jsx'
 import { apiClient, normalizeApiError } from '../Frontend/src/hooks/apiClient.js'
 
 function Newsletter() {
