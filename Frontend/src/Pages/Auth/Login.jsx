@@ -1,9 +1,9 @@
 import { useMemo, useState } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 
-import Loader from '../Frontend/src/components/Loader.jsx'
-import { normalizeApiError } from '../Frontend/src/hooks/apiClient.js'
-import { useAuth } from '../Frontend/src/context/AuthContext.jsx'
+import Loader from '../../components/Loader.jsx'
+import { normalizeApiError } from '../../hooks/apiClient.js'
+import { useAuth } from '../../context/AuthContext.jsx'
 
 function Login() {
   const navigate = useNavigate()

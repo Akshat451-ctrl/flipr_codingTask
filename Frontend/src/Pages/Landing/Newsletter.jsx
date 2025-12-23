@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
-import Loader from '../components/Loader.jsx'
-import { apiClient, normalizeApiError } from '../Frontend/src/hooks/apiClient.js'
+import Loader from '../../components/Loader.jsx'
+import { apiClient, normalizeApiError } from '../../hooks/apiClient.js'
 
 function Newsletter() {
   const [email, setEmail] = useState('')

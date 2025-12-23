@@ -1,9 +1,9 @@
 import { useCallback, useMemo } from 'react'
 
-import ClientCard from '../Frontend/src/components/ClientCard.jsx'
-import Loader from '../Frontend/src/components/Loader.jsx'
-import { apiClient, normalizeApiError } from '../Frontend/src/hooks/apiClient.js'
-import useAsync from '../Frontend/src/hooks/useAsync.js'
+import ClientCard from '../../components/ClientCard.jsx'
+import Loader from '../../components/Loader.jsx'
+import { apiClient, normalizeApiError } from '../../hooks/apiClient.js'
+import useAsync from '../../hooks/useAsync.js'
 
 function getInitials(name) {
   return String(name || '')
